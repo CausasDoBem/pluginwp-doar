@@ -1,26 +1,15 @@
 <?php
-
-/**
- * The public-facing functionality of the plugin.
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
- */
-
 /**
  * The public-facing functionality of the plugin.
  *
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/public
+ * @package    CausasDoBem
+ * @subpackage DoarCausasDoBem/public
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Public {
+class DoarCausasDoBem_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -73,7 +62,7 @@ class Plugin_Name_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/doar-causas-do-bem-public.css', array(), $this->version, 'all' );
 
 	}
 

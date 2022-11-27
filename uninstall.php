@@ -22,10 +22,21 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
+ * @package    DoarCausasDoBem
  */
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+$option_name = 'wporg_option';
+
+delete_option( $option_name );
+
+// for site options in Multisite
+//delete_site_option( $option_name );
+
+// drop a custom database table
+global $wpdb;
+$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}causas_do_bem");
+$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}causas_do_bem_tipo_doacoes");
